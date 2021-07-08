@@ -34,9 +34,7 @@ class BookTest {
     public void shouldEquals() {
         Book firstBook = new Book(1, "Java I", 1000, "author1");
         Book secondBook = new Book(1, "Java I", 1000, "author1");
-
         assertEquals(firstBook, secondBook);
-
     }
 
     @Test
@@ -50,6 +48,12 @@ class BookTest {
         Book book = new Book();
         Book nullBook = null;
         assertNotEquals(book, nullBook);
+    }
+    @Test
+    public void shouldNotEqualsPrice() {
+        Book first = new Book(1, "Java I", 1000, "author1");
+        Book second = new Book(1, "Java I", 2000, "author1");
+        assertNotEquals(first, second);
     }
     @Test
     public void shouldHaveAllFieldsAndMethodFromSuperClass() {
