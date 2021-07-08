@@ -9,8 +9,15 @@ public class Smartphone extends Product {
     public Smartphone(int id, String name, int price, String producer) {
         super(id, name, price);
         this.producer = producer;
-        //this.pages = pages;
-        //this.publishedYear = publishedYear;
     }
 
+    public String getProducer() {
+        return this.producer;
+    }
+
+//    public void setName(String name) {        this.setName(name);    }
+
+    public void setProducer(String producer) {
+        this.producer = producer;
+    }
 }
