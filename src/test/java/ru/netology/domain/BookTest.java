@@ -39,19 +39,23 @@ class BookTest {
 
     }
 
-  @Test
-  public void shouldNotEqualsProduct() {
-    Book firstBook = new Book(1, "Java I", 1000, "author1");
-    Book secondBook = new Book(2, "Java I", 1000, "author1");
-
-    assertNotEquals(firstBook, secondBook);
-  }
-
+    @Test
+    public void shouldNotEqualsClass() {
+        Smartphone smartphone = new Smartphone(201, "Smartphone1", 1000, "Samsung");
+        Book book = new Book(1, "Java I", 1000, "");
+        assertNotEquals(smartphone, book);
+    }
+    @Test
+    public void shouldNotEqualsNull() {
+        Book book = new Book();
+        Book nullBook = null;
+        assertNotEquals(book, nullBook);
+    }
     @Test
     public void shouldHaveAllFieldsAndMethodFromSuperClass() {
-      Book firstEmptyBook = new Book();
-      Book secondEmptyBook = new Book();
-      assertEquals(firstEmptyBook, secondEmptyBook);
+        Book firstEmptyBook = new Book();
+        Book secondEmptyBook = new Book();
+        assertEquals(firstEmptyBook, secondEmptyBook);
 
     }
 

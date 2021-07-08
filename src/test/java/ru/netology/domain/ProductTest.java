@@ -43,7 +43,9 @@ class ProductTest {
     public void shouldEquals() {
         Product first = new Product(1, "Java I", 1000);
         Product second = new Product(1, "Java I", 1000);
+        Product third = first;
         assertEquals(first, second);
+        assertEquals(first, third);
     }
 
     @Test
